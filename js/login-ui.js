@@ -90,7 +90,6 @@ if (signupBtn && signupMsg && typeof window.signup === "function") {
         window.location.href = "login.html";
       }, 1000);
     }, 600);
-    
   };
 
   function showSignupError(text) {
