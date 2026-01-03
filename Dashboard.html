@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="dashboard-header">
+  <h2>My Dashboard</h2>
+  <button onclick="logout()">Logout</button>
+</header>
+
+<div class="dashboard-container">
+
+  <div class="upload-box">
+
+    <input type="file" id="imageUpload" hidden>
+    <label for="imageUpload" class="file-btn">Choose Image</label>
+    <span id="fileName">No file chosen</span>
+     <button class="upload-btn" onclick="uploadImage()">Upload Image</button>
+
+  </div>
+
+  <section class="gallery" id="myGallery"></section>
+
+</div>
+
+<script src="js/interaction.js"></script>
+<script src="js/upload.js"></script>
+
+</body>
+</html>

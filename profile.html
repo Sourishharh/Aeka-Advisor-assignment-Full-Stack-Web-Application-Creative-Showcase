@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Profile</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<script src="js/interaction.js"></script>
+<body>
+
+<h2 id="username"></h2>
+<section class="gallery" id="gallery"></section>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const username = params.get("user");
+
+const user = JSON.parse(localStorage.getItem(username));
+
+if (!user) {
+  document.body.innerHTML = "<h2>User not found</h2>";
+} else {
+  document.getElementById("username").innerText = username;
+  user.images.forEach(img => {
+    document.getElementById("gallery").innerHTML += `<img src="${img}">`;
+  });
+}
+</script>
+
+</body>
+</html>
